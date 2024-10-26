@@ -1,0 +1,43 @@
+﻿/*.container-fluid {
+    background-color: #343a40;*/ /* Dark background for container */
+    /*color: white;*/ /* White text color */
+/*}*/
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between items */
+}
+
+    .filter-container .form-group {
+        flex: 1 1 200px; /* Flex-grow, flex-shrink, and base width */
+    }
+
+.form-control {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff;
+}
+
+#filterButton:hover {
+    background-color: green; /* Darker button color on hover */
+    border-color: #004085;
+}
+
+/* Styling for the table */
+/*.table {
+    color: black;*/ /* Black text color for table */
+    /*background-color: white;*/ /* White background for table */
+/*}*/
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Light grey background for odd rows */
+}
+
+.table th,
+.table td {
+    color: black; /* Black text color for table headers and cells */
+}

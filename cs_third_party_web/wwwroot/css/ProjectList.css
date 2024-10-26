@@ -1,0 +1,25 @@
+﻿
+/*.container-fluid {
+    background-color: #343a40;*/ /* Dark background for container */
+    /*color: white;*/ /* White text color */
+/*}*/
+
+
+
+   
+.required-field{
+    border: 2px solid red; 
+}
+
+#submitButton:hover {
+    background-color: green; /* Darker button color on hover */
+    border-color: #004085;
+}
+
+/* .table-dark {
+    background-color: #212529; 
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #495057; 
+} */

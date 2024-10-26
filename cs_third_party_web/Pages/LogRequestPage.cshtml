@@ -1,0 +1,89 @@
+﻿@page
+@model cs_third_party_web.Pages.LogRequestPageModel
+@{
+    ViewData["Title"] = "Log Requests";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/datatables/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <div class="container-fluid p-3">
+        <h2 class="text-primary">Log Requests</h2>
+        <hr>
+        <div class="row filter-container mt-4">
+
+            <div class="form-group col">
+                <label for="LogReqprojectSelect">Project List:</label>
+                <select id="LogReqprojectSelect" class="form-control"></select>
+            </div>
+
+            <div class="form-group col">
+                <label for="LogReqstartDate">Start Date:</label>
+                <input type="date" id="LogReqstartDate" class="form-control" />
+            </div>
+
+            <div class="form-group col">
+                <label for="LogReqendDate">End Date:</label>
+                <input type="date" id="LogReqendDate" class="form-control" />
+            </div>
+
+
+            <div class="form-group col-auto align-self-end">
+                <button id="filterButtonlogReq" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary bg-gradient"> </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="LogRequestTable" class="display table-bordered text-center" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Project Id</th>
+                                        <th>Project Name</th>
+                                        <th>Code</th>
+                                        <th>Message</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Api Token</th>
+                                        <th>Criteria</th>
+                                        <th>Per Page</th>
+                                        <th>Page</th>
+                                        <th>Order Key</th>
+                                        <th>Order Direction</th>
+                                        <th>Created At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be dynamically populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                          
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/datatables/dataTables.min.js"></script>
+    <script src="~/lib/datatables/datatables.bootstrap5.min.js"></script>
+    <script src="~/js/LogRequest.js"></script>
+
+</body>
+</html>

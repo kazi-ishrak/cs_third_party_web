@@ -1,0 +1,91 @@
+﻿@page
+@model cs_third_party_web.Pages.Pages_AttendanceLogPage
+@{
+    ViewData["Title"] = "Attendance Logs";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/datatables/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="~/css/AttendanceLog.css" rel="stylesheet" />
+     <!-- Link to external CSS file -->
+    
+</head>
+<body>
+    <div class="container-fluid p-3">
+        <h2 class="text-primary">Attendance Logs</h2>
+        <hr>
+        <div class="row filter-container mt-4">
+
+            <div class="form-group col">
+                <label for="projectSelect">Project List:</label>
+                <select id="projectSelect" class="form-control"></select>
+            </div>
+
+            <div class="form-group col">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" class="form-control" />
+            </div>
+
+            <div class="form-group col">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" class="form-control" />
+            </div>
+           
+
+            <div class="form-group col-auto align-self-end">
+                <button id="filterButton" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-primary bg-gradient"> </div>
+                    <div class="card-body">
+                        
+                        <div class="table-responsive">
+                            <table id="attendanceTable" class="display  table-bordered text-center" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Project Id</th>
+                                        <th>Project Name</th>
+                                        <th>CS Person Id (DB)</th>
+                                        <th>CS Person Identifier</th>
+                                        <th>HRM Office Id</th>
+                                        <th>Device Identifier</th>
+                                        <th>Log Time</th>
+                                        <th>CS Sync Time</th>
+                                        <th>Log Enter Time</th>
+                                        <th>Client Sync Time</th>
+                                        <th>Log Status</th>
+                                        <th>Remarks</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be dynamically populated here -->
+                                </tbody>
+                            </table>
+
+                        </div>
+                            
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/datatables/dataTables.min.js"></script>
+<script src="~/lib/datatables/datatables.bootstrap5.min.js"></script>
+<script src="~/js/DropDown.js"></script>
+<script src="~/js/Attendancelog.js"></script>
+
+
+
+</html>

@@ -1,0 +1,68 @@
+﻿@page
+@model cs_third_party_web.Pages.MapCsHrmEmployeePageModel
+@{
+    ViewData["Title"] = "Mapped CS and HRM Employee";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/datatables/dataTables.bootstrap5.min.css" rel="stylesheet" />
+     <link href="~/css/MappedCsHrmEmployee.css" rel="stylesheet" /> 
+</head>
+<body>
+    <div class="container-fluid p-3">
+        <h2 class="text-primary">Mapped CS & HRM Employees</h2>
+        <hr>
+        <div class="row  mt-4">
+            <div class="form-group col-sm-3" >
+                <label for="MappingsProjectSelect">Project List:</label>
+                <select id="MappingsProjectSelect" class="form-control"></select>
+            </div>
+
+            <div class="form-group col-auto align-self-end">
+                <button id="filterButtonMapping" class="btn btn-primary">Filter</button>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header bg-primary bg-gradient"> </div>
+                    <div class="card-body">
+                        <div class="table-responsive"> 
+                            <table id="mappedCsHrmTable" class="display table-bordered text-center" style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Project Id</th>
+                                        <th>Project Name</th>
+                                        <th>HRM Id (DB)</th>
+                                        <th>HRM Office Id</th>
+                                        <th>CS Id (DB)</th>
+                                        <th>Created at</th>
+                                        <th>Updated At</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Data will be dynamically populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/datatables/dataTables.min.js"></script>
+<script src="~/lib/datatables/datatables.bootstrap5.min.js"></script>
+<script src="~/js/MappedCsHrmEmployee.js"></script>
+
+
+</html>
